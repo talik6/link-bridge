@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        function doRedirect() {
+            // 1. Attempt to open the Deep Link
+            window.location.href = "eop://?opid=43603";
+
+            // 2. Wait 1.5 seconds. If the deep link didn't "take over," 
+            // redirect to the login URL.
+            setTimeout(function() {
+                window.location.href = "https://tadpisli-copy-1009fcd8.base44.app/login?from_url=https%3A%2F%2Ftadpisli-copy-1009fcd8.base44.app%2F";
+            }, 1500);
+        }
+        window.onload = doRedirect;
+    </script>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+        Redirecting to app... <br>
+        <small>If nothing happens, <a href="https://tadpisli-copy-1009fcd8.base44.app/login?from_url=https%3A%2F%2Ftadpisli-copy-1009fcd8.base44.app%2F">click here</a>.</small>
+    </p>
+</body>
+</html>
